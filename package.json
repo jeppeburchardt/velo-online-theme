@@ -4,7 +4,7 @@
   "description": "Theme for velo-online.ch",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "grunt": "node node_modules/grunt-cli/bin/grunt"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
     "grunt-zip": "~0.13.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt": "~0.4.4",
+    "grunt-cli": "~0.1.13",
     "grunt-banner": "~0.2.2",
     "grunt-contrib-less": "~0.11.0",
     "grunt-contrib-copy": "~0.5.0"

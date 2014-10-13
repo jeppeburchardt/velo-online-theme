@@ -1,0 +1,53 @@
+.sidebar {
+
+	ul, li {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.widget {
+
+		//background-color: #3e4045;
+
+		h2 {
+			font-size: 24px;
+		}
+	}
+
+	.widget_search {
+		label {
+			display: none;
+		}
+		input[type=submit] {
+			display: none;
+		}
+		input[type=text] {
+			width: 100%;
+			border: none;
+			padding: 10px;
+			margin: 0;
+			color: @base;
+			// border-style: solid;
+			// border-width: 1px;
+			border-radius: 3px;
+			background: white url('images/search-40.png') no-repeat right;
+		}
+	}
+
+	.widget_recent_entries {
+
+		a, span {
+			display: block;
+		}
+
+		span {
+			color: lighten(black, 70%);
+			font-size: 12px;
+		}
+
+		li {
+			margin-bottom: 10px;
+		}
+	}
+}

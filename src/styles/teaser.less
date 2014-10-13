@@ -1,0 +1,41 @@
+
+
+.teaser {
+
+	background-color: @background;
+	margin-bottom: 20px;
+	color: @base;
+	height: 250px;
+	box-shadow: 0 10px 20px darken(@background, 20%);
+
+	h2 {
+		border-top-width: 3px;
+		border-top-style: solid;
+		margin: 0;
+		padding: 10px 10px 0 10px;
+	}
+
+	a, a:link {
+		color: @base;
+	}
+
+	&.no-image {
+
+		h2 {
+			font-size: 30px;
+		}
+
+		p {
+			font-size: 21px;
+			font-weight: 200;
+			padding: 0 10px 10px;
+		}
+	}
+
+	&.image {
+
+		h2 {
+			font-size: 20px;
+		}
+	}
+}

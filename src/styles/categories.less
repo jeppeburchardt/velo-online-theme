@@ -1,0 +1,78 @@
+@livestyle: #7aff87;
+@dialogue: #ff7acb;
+@safety: #7acbff;
+@gadgets: #ffd27a;
+
+
+
+.livestyle {
+	&.menu-item a,
+	h2,
+	.single & h1 {
+		color: @livestyle !important;
+		border-color: @livestyle;
+	}
+	&.menu-item a:hover {
+		color: lighten(@livestyle, 15%) !important;
+		border-color: lighten(@livestyle, 15%) !important;
+	}
+}
+.category-livestyle {
+	.jumbotron {
+		background-color: @livestyle;
+	}
+}
+.dialogue {
+
+	&.menu-item a,
+	h2,
+	.single & h1 {
+		color: @dialogue !important;
+		border-color: @dialogue;
+	}
+	&.menu-item a:hover {
+		color: lighten(@dialogue, 15%) !important;
+		border-color: lighten(@dialogue, 15%) !important;
+	}
+}
+.category-dialogue {
+	.jumbotron {
+		background-color: @dialogue;
+	}
+}
+.safety {
+
+	&.menu-item a,
+	h2,
+	.single & h1 {
+		color: @safety !important;
+		border-color: @safety;
+	}
+	&.menu-item a:hover {
+		color: lighten(@safety, 15%) !important;
+		border-color: lighten(@safety, 15%) !important;
+	}
+}
+.category-safety {
+	.jumbotron {
+		background-color: @safety;
+	}
+}
+.gadgets {
+
+	&.menu-item a,
+	h2,
+	.single & h1 {
+		color: @gadgets !important;
+		border-color: @gadgets;
+	}
+	&.menu-item a:hover {
+		color: lighten(@gadgets, 15%) !important;
+		border-color: lighten(@gadgets, 15%) !important;
+	}
+}
+.category-gadgets {
+	.jumbotron {
+		background-color: @gadgets;
+	}
+}

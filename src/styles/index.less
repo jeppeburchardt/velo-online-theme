@@ -1,20 +1,30 @@
+@background: #fff;
+@base: #212121;
+@page-background: #f1f1f1;
+
+
 body {
 
-	background-color: white;
+	background-color: @page-background;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar-brand, .btn {
 	font-family: 'Questrial', sans-serif;
+	color: @base;
 }
 
-#wpadminbar {
-	display: none;
+.meta {
+	padding: 5px 10px 10px 10px;
+	color: lighten(@base, 30%);
+	text-transform: uppercase;
+	font-size: 11px;
 }
+
+@import "categories.less";
 
 img.velo-image {
 	width: 100%;
 }
-
 span.lang {
 	position: absolute;
 	top: 5px;
@@ -27,39 +37,13 @@ span.lang {
 	padding: 4px;
 }
 
-.navbar {
-	background-color: #3e4045;
+.jumbotron {
+	background-color: @background;
+	color: @base;
 }
 
-.jumbotron {}
-
-.teaser {
-
-	background-color: #eee;
-	margin-bottom: 20px;
-	border-bottom: 1px solid #ccc;
-
-	&.no-image {
-
-		padding: 10px;
-
-		h2 {
-			font-size: 30px;
-			margin-top: 0px;
-		}
-
-		p {
-			font-size: 21px;
-			font-weight: 200;
-		}
-	}
-
-	&.image {
-
-		h2 {
-			font-size: 20px;
-			margin: 5px 0;
-			padding: 10px;
-		}
-	}
-}
+@import "navbar.less";
+@import "article.less";
+@import "teaser.less";
+@import "widgets.less";
+@import "post.less";

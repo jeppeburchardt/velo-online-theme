@@ -11,8 +11,8 @@
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
 	</head>
-	<body class="<?php body_class(); ?>">
-		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<body <?php body_class(); ?>>
+		<div class="navbar navbar-inverse" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -24,12 +24,7 @@
 					<a class="navbar-brand" href="#"><?php bloginfo( 'name' ); ?></a>
 				</div>
 				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Sikkerhed</a></li>
-						<li><a href="#">Sundhed</a></li>
-						<li><a href="#">Gadgets</a></li>
-						<li><a href="#">Livsstil</a></li>
-					</ul>
+					<?php wp_nav_menu( array('menu'=>'categories', 'menu_class'=>'nav navbar-nav navbar-right') ); ?>
 					<?php wp_nav_menu( array('menu_class'=>'nav navbar-nav') ); ?>
 				</div>
 	  		</div>

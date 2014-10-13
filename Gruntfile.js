@@ -37,25 +37,27 @@ module.exports = function(grunt) {
 			main: {
 				expand: true,
 				cwd:'src/',
-				src: ['*.php'],
+				src: ['*.php', 'images/*.png', 'screenshot.png'],
 				dest: 'tmp/'
 			},
 			test: {
 				expand: true,
 				cwd: 'tmp/',
-				src: '*.*',
+				src: ['*.*', 'images/*.png', 'screenshot.png'],
 				dest: '/Users/jeppe/Projects/veloonline/www/wp-content/themes/velo-online/' 
 			}
 		},
 		zip: {
 			'bin/velo-online-theme.zip': [
 				'tmp/*.php',
-				'tmp/*.css'
+				'tmp/*.css',
+				'screenshot.png',
+				'tpm/images/*.png'
 			]
 		},
 		watch: {
 			scripts: {
-				files: ['src/**/*.less', 'src/*.php'],
+				files: ['src/**/*.less', 'src/*.php', 'src/images/*.png'],
 				tasks: ['less', 'usebanner', 'copy']
 			}
 		}
