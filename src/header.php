@@ -25,7 +25,7 @@
 				</div>
 				<div class="navbar-collapse collapse">
 					<?php wp_nav_menu( array('menu'=>'categories', 'menu_class'=>'nav navbar-nav navbar-right') ); ?>
-					<?php wp_nav_menu( array('menu_class'=>'nav navbar-nav') ); ?>
+					<?php wp_nav_menu( array('menu'=>'pages', 'menu_class'=>'nav navbar-nav') ); ?>
 				</div>
 	  		</div>
 		</div>

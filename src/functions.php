@@ -1,14 +1,16 @@
 <?php
 
-
-register_nav_menu('primary', 'Primary Menu');
-
+function init_menus() {
+	register_nav_menu('primary', __('Primary Menu'));
+	register_nav_menu('categories', __('Categories'));	
+}
 
 add_theme_support('post-thumbnails'); 
 
 add_image_size('velo-frontpage', 360, 202, true);
 add_image_size('velo-article', 698, 350, true);
 
+add_action('init', 'init_menus');
 
 function velo_thumbnail( $html, $post_id, $post_image_id ) {
 	global $post;
@@ -62,7 +64,7 @@ function velo_wp_nav_menu_args( $args = '' ) {
 	$args['container'] = false;
 	return $args;
 }
-add_filter( 'wp_nav_menu_args', 'velo_wp_nav_menu_args' );
+add_filter('wp_nav_menu_args', 'velo_wp_nav_menu_args');
 
 
 // add category nicenames in body and post class
