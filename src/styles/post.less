@@ -10,6 +10,10 @@
 		background-color: @background;
 		box-shadow: 0 10px 20px darken(@background, 20%);
 
+		& > img {
+			width: 100%;
+		}
+
 		h1 {
 			border-top-width: 3px;
 			border-top-style: solid;
@@ -28,6 +32,32 @@
 
 		p {
 			padding: 0 20px;
+		}
+
+		.wp-caption {
+			background-color: #eee;
+			width: auto !important;
+
+			p {
+				padding: 5px 10px;
+				margin: 0;
+				font-style: italic;
+			}
+		}
+		.alignright {
+			float: right;
+			margin-left: 20px;
+		}
+		.alignleft {
+			float: left;
+			margin-right: 20px;
+		}
+		.aligncenter {
+			margin: auto;
+			display: block;
+		}
+		.alignnone {
+
 		}
 	}
 }
