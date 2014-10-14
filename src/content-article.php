@@ -9,9 +9,12 @@
 <!-- 	<div class="row">
 		<div class="col-md-8"> -->
 			<h1><?php the_title(); ?></h1>
-			<div class="meta"><?php the_author(); ?> | <?php the_time( get_option( 'date_format' ) ); ?></div>
+			<div class="meta"><?php the_time( get_option( 'date_format' ) ); ?></div>
 			<?php the_content(); ?>
 <!-- 		</div>
 	</div> -->
+	<div>
+		<div class="fb-like" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+	</div>
 </div>
 </div>
