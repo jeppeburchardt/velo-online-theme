@@ -1,25 +1,60 @@
-
-
 .teaser {
 
+	position: relative;
+	margin-bottom: 40px;
 	background-color: @background;
-	margin-bottom: 20px;
-	color: @base;
-	height: 250px;
 	box-shadow: 0 10px 20px darken(@background, 20%);
+	color: @base;
 
-	h2 {
-		border-top-width: 3px;
-		border-top-style: solid;
-		margin: 0;
-		padding: 10px 10px 0 10px;
+	&:before {
+		display: block;
+		content: "";
+		padding-bottom: 88%; 
 	}
 
-	a, a:link {
-		color: @base;
+	.post {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		.text {
+			position: absolute;
+			bottom: 0;
+			background-color: @background;
+			min-height: 37%;
+			width: 100%;
+		}
+
+		h2 {
+			border-top-width: 3px;
+			border-top-style: solid;
+			margin: 0;
+			padding: 10px 10px 0 10px;
+		}
 	}
 
 	&.no-image {
+
+		overflow: hidden;
+
+		&:after {
+			display: block;
+			content: "";
+			padding-left: 10px;
+			height: 30px;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			background-color: red;
+			background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%); /* IE10+ */
+			background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%); /* W3C */
+		}
 
 		h2 {
 			font-size: 30px;
@@ -32,10 +67,8 @@
 		}
 	}
 
-	&.image {
-
-		h2 {
-			font-size: 20px;
-		}
+	a, a:link {
+		color: @base;
+		display: block;
 	}
 }
