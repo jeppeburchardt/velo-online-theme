@@ -32,9 +32,10 @@ function velo_seo_doctype ($output) {
 function velo_seo_head () {
 	global $post;
 	if (is_singular()) {
+		setup_postdata($post);
 		$url = esc_attr(get_permalink());
 		$site = esc_attr(get_bloginfo('name'));
-		$description = esc_attr(get_the_excerpt());
+		$description = esc_attr(strip_tags(get_the_excerpt()));
 		$title = esc_attr(get_the_title());
 		$thumb = has_post_thumbnail($post->ID) ? esc_attr(wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium')[0]) : '';
 	} else {
