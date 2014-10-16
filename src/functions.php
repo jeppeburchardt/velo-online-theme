@@ -34,30 +34,31 @@ function velo_seo_head () {
 	if (is_singular()) {
 		$url = esc_attr(get_permalink());
 		$site = esc_attr(get_bloginfo('name'));
+		$description = esc_attr(get_the_excerpt());
 		$title = esc_attr(get_the_title());
 		$thumb = has_post_thumbnail($post->ID) ? esc_attr(wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium')[0]) : '';
 	} else {
 		//front-page or pther:
-		$title = $site = get_bloginfo('name');
+		$title = $site = esc_attr(get_bloginfo('name'));
+		$description = esc_attr(get_bloginfo('description'));
 		$url = '';
 		$thumb = '';
 	}
 	//post:
-	echo '<meta name="description" content="{$theme->metaDescription}">';
-	echo '<meta name="keywords" content="{$theme->metaKeywords}">';
+	echo '<meta name="description" content="'.$description.'">';
 
 	echo '<link rel="canonical" href="'.$url.'" />';
 	echo '<meta property="og:site_name" content="'.$site.'" />';
 	echo '<meta property="og:url" content="'.$url.'" />';
 	echo '<meta property="og:title" content="'.$title.'" />';
-	echo '<meta property="og:description" content="{$theme->metaDescription}" />';
+	echo '<meta property="og:description" content="'.$description.'" />';
 	echo '<meta property="og:image" content="'.$thumb.'" />';
 
 	echo '<meta name="twitter:card" content="summary_large_image" />';
 	echo '<meta name="twitter:domain" content="kosmobot.dk" />';
 	echo '<meta name="twitter:site" content="@veloonlinech" />';
 	echo '<meta name="twitter:title" content="'.$title.'" />';
-	echo '<meta name="twitter:description" content="{$theme->metaDescription}" />';
+	echo '<meta name="twitter:description" content="'.$description.'" />';
 	echo '<meta name="twitter:image" content="'.$thumb.'" />';
 	
 	echo '<meta property="og:type" content="article"/>';
