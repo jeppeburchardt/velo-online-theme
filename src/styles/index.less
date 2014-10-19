@@ -47,3 +47,62 @@ span.lang {
 @import "teaser.less";
 @import "widgets.less";
 @import "post.less";
+
+
+footer {
+	margin-bottom: 40px;
+	color: darken(@page-background, 30%);
+
+}
+.icon {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	line-height: 10px;
+	vertical-align: middle;
+	position: relative;
+	border-radius: 3px;
+	overflow: hidden;
+	margin: 0 10px 0 0;
+	border-style: solid;
+	border-width: 1px;
+	
+	& + .icon {
+		margin-left: -5px;
+	}
+}
+
+.icon.ch {
+	background-color: red;
+
+	&:before,
+	&:after {
+		position: absolute;
+		background-color: white;
+		content: "";
+		display: block;
+		top: 20%;
+		right: 40%;
+		bottom: 20%;
+		left: 40%;
+	}
+	&:after {
+		top: 40%;
+		right: 20%;
+		bottom: 40%;
+		left: 20%;
+	}
+}
+.icon.zu {
+	background-color: #1aa5ff;
+
+	&:before {
+		display: block;
+		content: "";
+		border-style: solid;
+		border-width: 10px;
+		border-color: rgba(255, 255, 255, 1) rgba(255, 255, 255, 1) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+	}
+}
+
+

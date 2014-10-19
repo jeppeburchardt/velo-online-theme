@@ -5,7 +5,6 @@
 		<title><?php wp_title(); ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title><?php wp_title( '|', true, 'right' ); ?></title>
 		<?php wp_head(); ?>
 		<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
@@ -30,7 +29,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#"><?php bloginfo( 'name' ); ?></a>
+					<a class="navbar-brand" href="<?php bloginfo('url') ?>"><?php bloginfo( 'name' ); ?></a>
 				</div>
 				<div class="navbar-collapse collapse">
 					<?php wp_nav_menu( array('menu'=>'categories', 'menu_class'=>'nav navbar-nav navbar-right') ); ?>

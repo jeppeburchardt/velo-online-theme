@@ -42,7 +42,7 @@ function velo_seo_head () {
 		//front-page or pther:
 		$title = $site = esc_attr(get_bloginfo('name'));
 		$description = esc_attr(get_bloginfo('description'));
-		$url = '';
+		$url = esc_attr(get_bloginfo('url'));
 		$thumb = '';
 	}
 	//post:
@@ -56,15 +56,13 @@ function velo_seo_head () {
 	echo '<meta property="og:image" content="'.$thumb.'" />';
 
 	echo '<meta name="twitter:card" content="summary_large_image" />';
-	echo '<meta name="twitter:domain" content="kosmobot.dk" />';
+	echo '<meta name="twitter:domain" content="veloonline.ch" />';
 	echo '<meta name="twitter:site" content="@veloonlinech" />';
 	echo '<meta name="twitter:title" content="'.$title.'" />';
 	echo '<meta name="twitter:description" content="'.$description.'" />';
 	echo '<meta name="twitter:image" content="'.$thumb.'" />';
 	
 	echo '<meta property="og:type" content="article"/>';
-	echo '<meta property="og:url" content="'.$url.'"/>';
-	echo '<meta property="og:site_name" content="'.$name.'"/>';
 }
 add_filter('language_attributes', 'velo_seo_doctype');
 add_action('wp_head', 'velo_seo_head');
